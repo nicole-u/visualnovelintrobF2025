@@ -31,6 +31,16 @@ label start:
     e "This is new dialogue."
 
     e "Task"
+
+    menu first_menu:
+        "Is this the right choice?":
+            e "I don't know. Is this the right one?"
+            e "I don't know why I chose this."
+        "Or is it this one?":
+            e "Yeah this is the right one."
+    
+    e "It's okay."
+    
     # This ends the game.
 
 
