@@ -29,6 +29,8 @@ label start:
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
     e "This is new dialogue."
+
+    e "Task"
     # This ends the game.
 
 
