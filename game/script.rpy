@@ -23,17 +23,43 @@ label start:
     "{i}{/cps}What's going on?{/i}{/cps}"
     "{i}Why does my head hurt?{/i}"
 
-    show eileen happy
+    y "What the- where is this place?"
 
-    # These display lines of dialogue.
+    ft "So you've awakened....your name."
 
-    e "You've created a new Ren'Py game."
+    ft "Welcome to my emporium. I am a fortune teller."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    ft "You may rest here as long as it takes to restore your vitality."
 
-    e "This is new dialogue."
+    ft "The journey through death can be very taxing."
 
-    e "Task"
+    y "Death?What are you talking about???"
+
+    ft "Oh, silly me!"
+
+    ft "It seems in my excitement at meeting a new face, I had forgotten you are clueless about what has transpired!"
+
+    ft "You died!"
+
+    y "Huh-!?"
+
+    ft "Don't fret about it. Happens to the best of us. And all of us."
+
+    y "Wait what?"
+
+    y "I died?"
+
+    y "How?"
+
+    y "Where?"
+
+    y "When?"
+
+    y "Why??"
+
+    ft "Hmm, that I could not tell you."
+
+    ft "But perhaps my tarot cards could.."
 
     menu first_menu:
         "Is this the right choice?":
