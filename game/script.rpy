@@ -31,5 +31,7 @@ label start:
     e "This is new dialogue."
     # This ends the game.
 
+    e "I have no idea what i am doing/"
+
 
     return
