@@ -61,6 +61,75 @@ label start:
 
     ft "But perhaps my tarot cards could.."
 
+    #Insert Fortune Telling Cards Here
+
+    "A moment of collapse. Brick by brick the foundation was built, but one piece remains loose..."
+
+    "Death shrouds your present. The grand scythe of the reaper descends upon the sands of time. Ghosts of your past scream, future road, and present tremble."
+
+    "Love is in your future. Separated from Eros, the heartstrings yearn to fill their space, understanding they will learn."
+
+    ft "What interesting cards!"
+
+    y "Are they really? What does it all mean?"
+
+    ft "That is up to your own interpretation"
+
+    ft "However, the lines to beyond find promise, waiting to be uncovered."
+
+    ft "I am sure that if the circumstances of your death were to be discovered…"
+
+    ft "Then the spirits may grace you with a chance at mortal redemption."
+
+    y "Really??"
+
+    ft "Well, the sands are shifting. You'd best embark straight away."
+
+    ft "Take these tarot cards with you. They will aid you on your journey. "
+
+    y "Wait, how? Where do I start looking?"
+
+    ft "You do not need to look. Fate will bring the answer to you (the fortune teller fades away)"
+
+    y "Wait! I have more questions!"
+    
+    "What do I do here now?"
+
+    "Do I stay here? Do I leave?"
+
+    "They said that fate would bring the answer to me. Maybe I should stay here."
+
+    "A peak outside wouldn't hurt though. Maybe I could get a clue."
+
+    #insert transition here!
+
+    sg1 " Did you see that exorcist earlier? So hot! I better marry someone like that. "
+    sg2 "'Squeals' Oh my gosh, do you think they noticed us? Does my hair look okay?"
+
+    p1 "I saw a bunch of exorcists heading towards the school last night."
+
+    p2 "I heard it was because a spirit escaped!" 
+
+    p1 "I heard it wass because of a tower explosion!"
+
+    p2 "The tower? Hmm, either way we shouldn't stay out tonight."
+
+    "Exorcists? Evil spirits? A tower?"
+
+    "I can't believe this fortune teller stuff is just in the middle of a city. Does nobody think that's weird??"
+
+    "{i}Suddenly there's a loud crash{/i}"
+
+    unknown "Today is the day you disappear evil spirit!!"
+
+    y "Wait what? Where?"
+
+    unknown "Don't try to pretend. I can see your evil aura from a mile away!"
+
+    unknown "It's time for you to go back to the underworld!"
+
+    
+
     menu first_menu:
         "Is this the right choice?":
             e "I don't know. Is this the right one?"
