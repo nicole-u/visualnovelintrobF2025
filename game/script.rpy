@@ -3,7 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define y = Character("You")
 define ft = Character("Fortune Teller")
 define sg1 = Character("School Girl 1")
 define sg2 = Character("School Girl 2")
@@ -19,13 +18,20 @@ define p = Character("Professor")
 
 label start:
     scene black
+
+    $ player_name = renpy.input(prompt = "Please enter a name.")
+    if player_name == "":
+        $ player_name = "Y/N"
+
+    $ y = Character(player_name)
+
     "{i}{cps=*0.5}Where am I?{/i}{/cps}"
-    "{i}{/cps}What's going on?{/i}{/cps}"
-    "{i}Why does my head hurt?{/i}"
+    "{i}{cps=*0.5}What's going on?{/i}{/cps}"
+    "{i}{cps=*0.5}Why does my head hurt?{/i}{/cps}"
 
     y "What the- where is this place?"
 
-    ft "So you've awakened....your name."
+    ft "So you've awakened..."
 
     ft "Welcome to my emporium. I am a fortune teller."
 
