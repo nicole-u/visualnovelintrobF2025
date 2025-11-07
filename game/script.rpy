@@ -21,7 +21,7 @@ label start:
 
     $ player_name = renpy.input(prompt = "Please enter a name.")
     if player_name == "":
-        player_name = "Y/N"
+        $ player_name = "Y/N"
 
     $ y = Character(player_name)
 
