@@ -33,6 +33,9 @@ label start:
 
     ft "So you've awakened..."
 
+    scene bg ftshop
+    show ft neutral at center 
+
     ft "Welcome to my emporium. I am a fortune teller."
 
     ft "You may rest here as long as it takes to restore your vitality."
@@ -108,6 +111,8 @@ label start:
     "A peak outside wouldn't hurt though. Maybe I could get a clue."
 
     #insert transition here!
+
+    scene bg city
 
     sg1 " Did you see that exorcist earlier? So hot! I better marry someone like that. "
     sg2 "'Squeals' Oh my gosh, do you think they noticed us? Does my hair look okay?"
