@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 138: multiple at clauses are prohibited.
-    show unknown upset at center at smallersize with dissolve
-                                   ^
+File "game/script.rpy", line 247: choice menuitem expects a non-empty block.
+    "No, tell me why, or I won't go.":
+                                      ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Thu Nov 13 17:53:49 2025
+Thu Nov 13 22:37:20 2025
