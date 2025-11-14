@@ -13,6 +13,9 @@ define e = Character("Exorcist")
 define a = Character("Archivist")
 define p = Character("Professor")
 
+transform smallersize:
+    zoom 0.5
+
 
 # The game starts here.
 
@@ -112,7 +115,8 @@ label start:
 
     #insert transition here!
 
-    scene bg city
+    scene bg city 
+    hide ft
 
     sg1 " Did you see that exorcist earlier? So hot! I better marry someone like that. "
     sg2 "'Squeals' Oh my gosh, do you think they noticed us? Does my hair look okay?"
@@ -130,6 +134,8 @@ label start:
     "I can't believe this fortune teller stuff is just in the middle of a city. Does nobody think that's weird??"
 
     "{i}Suddenly there's a loud crash{/i}"
+
+    show unknown mystery at center, smallersize with dissolve
 
     unknown "Today is the day you disappear evil spirit!!"
 
@@ -156,6 +162,19 @@ label start:
     "Before the attack lands, you dive into an alleyway. You look around trying to figure out where you might be safe from this exorcist who seems to believe you are an evil spirit."
     "But who can help?"
     "The fortune teller!"
+
+    scene bg ftshop
+    hide unknown with dissolve
+
+    y "Help! Help!"
+    y "There's an exorcist after me!"
+    "{i}Where is everyone? Where did the fortune teller go? {/i}"
+    "{i} You look around. There's nobody in the shop. It's silent."
+    "{i}You look over to the table where you first awoke There's a piece of paper on the table. What does it say?{/i}"
+
+
+    "What?? What does that mean?"
+    "Charm through danger"
 
     menu first_menu:    
         "Is this the right choice?":

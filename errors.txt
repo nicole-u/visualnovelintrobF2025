@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 24: expected statement.
-    player_name = "Y/N"
-                ^
+File "game/script.rpy", line 138: multiple at clauses are prohibited.
+    show unknown upset at center at smallersize with dissolve
+                                   ^
 
-Ren'Py Version: Ren'Py 8.3.4.24120703
-Thu Nov  6 18:11:09 2025
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Thu Nov 13 17:53:49 2025
