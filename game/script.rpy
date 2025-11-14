@@ -134,9 +134,25 @@ label start:
 
     unknown "It's time for you to go back to the underworld!"
 
-    
+    "The exorcist tries to attack you with their weapon, but you somehow evade it."
 
-    menu first_menu:
+    y "Me!? But I'm not-"
+
+    unknown "An evil spirit? Save your words, you all say the same thing."
+
+    y "Wait!! Please hear me out!"
+
+    unknown "Thessai...mor'en...vora'thal.."
+
+    "The weapon in the exorcists hand starts glowing."
+
+    "{i}I need to run! Where do I go!?{/i}"
+
+    "Before the attack lands, you dive into an alleyway. You look around trying to figure out where you might be safe from this exorcist who seems to believe you are an evil spirit."
+    "But who can help?"
+    "The fortune teller!"
+
+    menu first_menu:    
         "Is this the right choice?":
             e "I don't know. Is this the right one?"
             e "I don't know why I chose this."
