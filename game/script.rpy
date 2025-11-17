@@ -12,10 +12,12 @@ define unknown = Character("???")
 define e = Character("Exorcist")
 define a = Character("Archivist")
 define p = Character("Professor")
-
+define Priest = Character("Priest")
 transform smallersize:
     zoom 0.5
 
+init python:
+    relationship = 0 
 
 # The game starts here.
 
@@ -206,10 +208,14 @@ label start:
 
     menu fight_choice:    
         "Keep running away.":
+        $ relationship += 15
+
             "{i} A chain appears from the exorcists weapon and gets thrown at you. This time you are unable to run fast enough to evade it.{/i}"
             "How is it doing that?"
             "{i} You try to jump out of the way, but trip on an oddly placed pillow. The spell catches up to you. Brace yourself!{/i}"
         "Stand still.":
+        $ relationship += 0
+
             "{i} A chain appears from the exorcists weapon and gets thrown at you.{/i}"
             "{i} The exorcist stops for a moment and the spell stops hurling towards you. {/i}"
             unknown "What games are you playing evil spirit? Why are you standing still!"
@@ -298,18 +304,378 @@ label start:
 
 
 
-    menu first_menu:    
-        "Is this the right choice?":
-            e "I don't know. Is this the right one?"
-            e "I don't know why I chose this."
-        "Or is it this one?":
-            e "Yeah this is the right one."
-    
-    e "It's okay."
-    
-    # This ends the game.
 
-    e "I have no idea what i am doing/"
 
+
+#screen 2
+label scene2:
+
+    scene bg_city_day
+    with dissolve
+
+    "You follow along as [exorcist] leads you through the city. His gait is steady and just slightly faster than the speed you're comfortable with. You can't help but feel it's intentional."
+
+    y "Hey [exorcist]?"
+
+    e "I have no desire for communication. Please refrain from breathing."
+
+    "I can't even breathe, let alone speak?"
+    "This isn't good. How am I supposed to make him love me?"
+    "No, don't give up!"
+    "It's time to put on the charm!"
+    "Compliments charm people, right? What do I compliment?"
+
+    menu:
+        "Their clothes…they fit so well…":
+            $ relationship -= 8
+            jump s2_clothes
+
+        "Their eyes…they're so dreamy…":
+            $ relationship += 20
+            jump s2_eyes
+
+
+label s2_clothes:
+
+    y "Y'know…those clothes…they look really good on you?"
+
+    e "Lusting over holy vestments… how vile can you get, evil spirit?"
+
+    y "I didn't mean it like that!"
+
+    e "All of you evil spirits are the same—nothing but a mire of desires."
+
+    y "I swear I didn't mean it like that!"
+    y  "To begin with, I didn't mean that the clothes look good."
+    y  "I meant you look good in the clothes."
+    y  "You probably look hot in anything!"
+
+    e "Is this your best attempt at flattery? Blatant sexual harassment?"
+
+    y "…I'm sorry…"
+
+    "Why am I so bad at this?"
+    "[exorcist] shakes his head, then sighs."
+
+    e "How dare you try and soil me with your filthy comments?"
+
+    y "I said I'm sorry! Can I make it up to you? Please?"
+
+    e "Hmmm. Are you willing to do anything?"
+
+    jump s2_merge
+
+
+
+label s2_eyes:
+
+    y "Y'know…you have…very pretty eyes?"
+
+    "[exorcist] stops and glances your way, just enough to reveal his left eye piercing into yours. With an exhale, he continues walking."
+
+    e "How much do you remember, Spirit?"
+
+    y "What do you mean?"
+
+    e "Most of your kind—those who crawl out of the afterlife—tend to return a blank slate."
+    e "Some fail to remember even the most basic of things, such as their names."
+    e "This is not a coincidence, nor a byproduct of bitterly refusing to die."
+    e "It is deliberate."
+    e "Your kind chooses to forget because they cannot stomach the memory of who, or what, they were."
+    e "All you keep are the embers of hatred, which you use to burn the world around you."
+    e "You see, I am nothing like you."
+    e "All I have are memories."
+    e "And, of the sludge of the past that swirls in my head, day after day—"
+    e "the strongest image is that of my mother."
+    e "The look in her eyes as she plucked out mine with a sewing needle because “the devil was using it to watch her.”"
+
+    y "I- I'm sorry. I was just trying to compliment you."
+
+    e "I don't need your lies."
+
+    y "I wasn't lying. I really do think they're pretty."
+
+    "[exorcist] pauses for a moment, then shakes his head."
+
+    e "…hmph, I dont need your flattery either."
+    e "What I need is your assent."
+
+    y "What do you mean?"
+
+    e "Are you willing to do anything to solve this “issue?”"
+
+    jump s2_merge
+
+
+
+label s2_merge:
+
+    "Anything? The fortune teller mentioned something about falling in love."
+    "Does that mean I need to do anything to get him to love me?"
+    "What does “loving me” even mean?"
+    "Do we have to date?"
+    "Do we need to get married?"
+    "Do we have to…?"
+    "Let's slow down! That's way too far into the future."
+    "One step at a time."
+
+    y "Yes, I'll do anything. I'll compliment something else about you!"
+
+    e "That's…great, but not what I need. I have something else in mind."
+
+    "[exorcist] stops, then turns to you."
+
+    e "How about we take a bath together?"
+
+    "Were jumping straight to that step!"
+    "I'm not ready for this!"
+
+    y "Wh- what?! Why all of a sudden?"
+
+    e "You're refusing?"
+
+    y "Well, I-I'm not saying that. I'm just confused."
+
+    e "Well, after this mess of a day, I think I'd enjoy a nice, thorough cleaning. A cleanse, if you will."
+
+    "That…is an interesting word of choice."
+
+    "[exorcist] pulls you up the stairs toward a large wooden door engraved with a cross."
+
+    scene bg_church_interior
+    with fade
+
+    "Once inside, [exorcist] speaks with one of the priests. You shyly stay behind."
+
+    e "Might you have a bath available?"
+
+    priest "Of course, [exorcist]. Shall I take you?"
+
+    e "There's no need. Thank you."
+
+    "[exorcist] brings his hands together, as if in prayer, and bows his head."
+
+    e "Father be with you."
+
+    priest "Father be with you."
+
+    "[exorcist] nudges the chain and leads you deeper into the church."
+
+    "That was quite the interaction…"
+
+    y "Do you know him?"
+
+    e "No, but every priest in the country knows me, for one reason or another."
+
+    y "Are any of those reasons because of how scary you are?"
+
+    e "Scary?"
+    e "I am not the one they should fear."
+    e "What they should fear are the vile, evil spirits like you."
+
+    y "See? This is what I mean!"
+    y "Every time you talk, it's like you want to murder someone."
+    y "And your eyes practically yell it!"
+
+    e "I- …no. People do not fear me."
+
+    y "I do!"
+
+    e "You should."
+
+    y "See!"
+
+    e "Never mind that!"
+    e "We're here."
+
+
+    "[exorcist] leads you into a wide room with a shallow pool of water."
+
+    y "Whoa! Do all churches have these?"
+
+    e "Yes. They are often used as 'after-work therapy' for exorcists."
+
+    "[exorcist] steps into the pool, water reaching below his knees."
+
+    y "What do you mean, 'grimy?'"
+
+    e "Evil spirits are quite adept at holding grudges."
+    e "And when those grudges latch onto an exorcist, it can be difficult to remove."
+
+    y "Like a curse?"
+
+    e "Precisely. These holy reservoirs cleanse the workings of any evil spirit."
+    e "Including evil spirits themselves."
+
+    "Wait—is he trying to kill me?"
+    "If I go in, will I die for real this time?"
+
+    y "I don't like where this is going."
+
+    e "This is not for you to like. This is to 'solve' our issue."
+    e "Now, enter."
+
+    y "What do I do?"
+
+    menu:
+        "Resist!":
+            $ relationship += 30
+            jump s2_resist
+
+        "Accept your death.":
+            $ relationship += 0
+            jump s2_accept
+
+
+
+label s2_resist:
+
+    y "No! This isn't what we agreed!"
+
+    "[exorcist] wraps his hand around the chain and pulls."
+
+    e "Get. In."
+
+    "You dig your feet into the ground, trying to pull away."
+
+    y "No! I don't wanna die!"
+
+    e "You're already dead!"
+    e "…jeez, why are you so strong?!"
+
+    "But [exorcist] is too strong. As you near the pool, your feet slip on a puddle—you fall in headfirst."
+
+    scene black
+    with fade
+
+    "Sloshing water echoes. You raise your head above the water, gasping."
+ 
+    scene bg_church_interior
+    with fade
+
+    y "I'm alive! I told you I'm not an evil spirit! I'm ali-"
+
+    "You turn to see [exorcist] had fallen in with you."
+
+    e "Ugh, what a pain. Why are you still here?"
+
+    "Your eyes trace over him. Wet clothes cling tightly to his body."
+
+    y "A- are you okay?"
+
+    "[exorcist] mutters to himself."
+
+    e "Why did nothing happen? Could this mean…?"
+    e "No, of course not. Then, is this evil spirit truly this powerful?"
+    e "But then why feign fear? Are they even capable…?"
+
+    "Ouch…"
+
+    y "Let's do the thinking once we're dry, yeah?"
+
+    "You stand and walk toward him—but slip, falling onto him."
+
+    y "Ow! S-sorry!"
+
+    "Your eyes meet, then dart away."
+
+    e "…are you going to get off?"
+
+    y "…do you want me to?"
+
+    priest "Ahem. Might I bring you a towel?"
+
+    "You both jump."
+
+    jump s2_final
+
+
+
+label s2_accept:
+
+    y "Fine. I'll do it."
+
+    "You hover one foot above the pool."
+
+    "Please don't kill me…"
+
+    "With all your willpower—"
+
+    "Please!"
+
+    "—you step in."
+
+    scene black
+    with fade
+
+    e "This…this can't be…"
+
+    scene bg_church_interior
+    with fade
+    
+    "You stand knee-deep in holy water. Still alive."
+
+    y "Does…does this mean I'm not an evil spirit?"
+
+    e "No. It can't. This could easily be a sign of your strength!"
+
+    y "Oh, please! Do you know how much courage that took?"
+
+    e "Then why did you?"
+
+    y "Because! I- I wanted to prove I'm not evil!"
+
+    e "Hmm…"
+
+    y "You're grasping at straws! What more do you want?"
+    y "Do you want me to sink my whole body into this?"
+    y "Fine!"
+
+    "You drop backward into the water."
+
+    y "See!"
+
+    "You splash your own face."
+
+    y "Totally fine!"
+
+    e "Alright. You've proven a point. Now stop."
+
+    "You rise—but slip. [exorcist] grabs your back, stopping you."
+
+    y "He's so close!"
+
+    "A warm feeling bubbles inside you."
+
+    y "Th- thanks…"
+
+    e "Yeah…"
+
+    jump s2_final
+
+
+
+
+label s2_final:
+
+    e "Might I bring you some towels?"
+
+    e "Please."
+
+    "You exit the pool and dry off as best you can."
+
+    y "What now?"
+
+    e "Now, we head to the university. They should have more answers there."
+    e "Maybe there I can get rid of this chain."
+    e "And, if I'm lucky, get rid of you too."
+
+    y "Alright…"
+
+    "Answers, huh?"
+    "I just hope they're the ones I need."
+
+    "You walk out of the church, [exorcist] leading once again—though this time, the echo of squeaky shoes follows behind you."
 
     return
+
