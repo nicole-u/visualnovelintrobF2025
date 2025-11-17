@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 247: choice menuitem expects a non-empty block.
-    "No, tell me why, or I won't go.":
-                                      ^
+File "game/script.rpy", line 210: choice menuitem expects a non-empty block.
+    "Keep running away.":
+                         ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Thu Nov 13 22:37:20 2025
+Mon Nov 17 14:26:12 2025
