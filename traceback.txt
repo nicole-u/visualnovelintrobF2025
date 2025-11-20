@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 316, in script
-    "You follow along as [exorcist] leads you through the city. His gait is steady and just slightly faster than the speed you're comfortable with. You can't help but feel it's intentional."
-NameError: name 'exorcist' is not defined
+  File "game/script.rpy", line 895, in script
+    p "Oh! [exorcist_name], it’s you! Haven’t I taught you how to knock?"
+NameError: name 'exorcist_name' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 316, in script
-    "You follow along as [exorcist] leads you through the city. His gait is steady and just slightly faster than the speed you're comfortable with. You can't help but feel it's intentional."
+  File "game/script.rpy", line 895, in script
+    p "Oh! [exorcist_name], it’s you! Haven’t I taught you how to knock?"
   File "renpy/ast.py", line 2915, in execute
     Say.execute(self)
     ~~~~~~~~~~~^^^^^^
@@ -43,9 +43,9 @@ Traceback (most recent call last):
     return eval(bytecode, globals, locals)
            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "<none>", line 1, in <module>
-NameError: name 'exorcist' is not defined
+NameError: name 'exorcist_name' is not defined
 
 Windows-11-10.0.26100-SP0 AMD64
 Ren'Py 8.4.1.25072401
 visual novel intro b 1.0
-Mon Nov 17 14:28:06 2025
+Thu Nov 20 01:15:11 2025

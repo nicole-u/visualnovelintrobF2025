@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 210: choice menuitem expects a non-empty block.
-    "Keep running away.":
-                         ^
+File "game/script.rpy", line 1136: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Try to prove you're not an evil spirit."
+                                             ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Mon Nov 17 14:26:12 2025
+Thu Nov 20 01:13:15 2025
