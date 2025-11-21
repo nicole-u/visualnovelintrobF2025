@@ -1356,13 +1356,15 @@ label scene5:
                 "You feel an arm wrap around you as the Exorcist supports you upright."
                 e "You’re clearly not okay. Let’s stay here till you are."
                 "You nod, numbly, barely aware of your surroundings."
-                end = "goodend"
+
+                $ end = "goodend"
             "Say no and cry":
                 y "No."
                 "You feel a warm tear stream down your cheek."
                 "The Exorcist’s finger brushes gently against your face, wiping the tear away."
                 e "Let’s stay here till you feel better."
-                end = "badend"
+
+                $ end = "badend"
 
     else:
         menu:
@@ -1374,14 +1376,14 @@ label scene5:
                 "You try standing again but only manage to move a bit."
                 y "I-I can’t move."
                 e "Fine, you can stay there, but only for a bit."
-                end = "normal"
+                $ end = "normal"
             "Say no and cry":
                 y "No."
                 "You feel a warm tear stream down your cheek."
                 e "Ugh, why are you so dramatic."
                 y "I-I can’t move."
                 e "Fine, you can stay there, but only for a bit."
-                end = "fun"
+                $ end = "fun"
 
     "You don’t know how much time passes, but at one point your heart finally calms down. You manage to shakily stand up. Cold sweat covers your face and you shiver from the breeze. Your eyes adjust and focus on your surroundings once again."
 
