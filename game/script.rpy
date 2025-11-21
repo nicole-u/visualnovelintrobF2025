@@ -222,7 +222,7 @@ label start:
     menu fight_choice:    
         "Keep running away.":
        
-            $ relationship += 15
+            $ relationship += 20
             "{i} A chain appears from the exorcists weapon and gets thrown at you. This time you are unable to run fast enough to evade it.{/i}"
             "How is it doing that?"
             "{i} You try to jump out of the way, but trip on an oddly placed pillow. The spell catches up to you. Brace yourself!{/i}"
