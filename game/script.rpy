@@ -13,6 +13,7 @@ define e = Character("Exorcist")
 define a = Character("Archivist")
 define p = Character("Professor")
 define priest = Character("Priest")
+define d = Character("Death")
 transform smallersize:
     zoom 0.5
 transform normalsize:
