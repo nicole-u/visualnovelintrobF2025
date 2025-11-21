@@ -13,6 +13,7 @@ define e = Character("Exorcist")
 define a = Character("Archivist")
 define p = Character("Professor")
 define priest = Character("Priest")
+define d = Character("Death")
 transform smallersize:
     zoom 0.5
 transform normalsize:
@@ -1273,6 +1274,352 @@ label flirtingmore:
 
     "The two of you move out of the hallway towards the tower; the mood is much less dreary."
 
+ 
+ 
+ 
+ 
+ 
+ #serceen 5
+label scene5:
+
+    scene bg tower 
+    with fade
+
+    "The scene is set in the tower which looks like there was an explosion or like a summoning gone wrong."
+
+    "You feel the chain that’s connecting you and the exorcist clinking against your wrist, hearing your hearts beat in sync, as the two of you walk up the tower."
+    "How long do you think you could keep this up for?"
+    "Can I make the exorcist care about me at least a little more?"
+    "As you walk up the tower stairs you feel yourself missing a step."
+
+    y "Ahhhh!"
+
+    "Just then you feel a warm arm catch you before you could hit the floor."
+    
+    show exorcist neutral at center, smallersize
+    
+    e "I can’t believe the Professor said you were top of your class."
+
+    "You pick yourself up and notice the Exorcist slightly blushing under the light of the moon."
+
+    if relationship > 60:   
+        menu:
+            "Argue back":
+                y "Hmm, didn’t realize you were listening so closely back there. I thought you didn’t care about me."
+                e "I- I- I-"
+                "The Exorcist turns tomato red and looks in a different direction."
+            "Blush and admit your clumsiness":
+                y "That’s my bad."
+                "You look down to hide your blushing face."
+                "You notice the slightest smile on the Exorcist’s face."
+
+    else:
+        menu:
+            "Argue back":
+                y "Hmmm, I didn’t realize you were listening so closely back there. I thought you didn’t care about me."
+                "The Exorcist scowls."
+                e "I don’t. That statement just stuck out so much because of how absurd it was."
+            "Blush and admit your clumsiness":
+                y "O-oh, that’s my bad."
+                "You look down to hide your blushing face."
+                "You notice the Exorcist roll their eyes."
+                e "Keep walking. I don’t have all day."
+
+    "The two of you walk in silence. Only the sound of the clinking chain echoes throughout the stairwell."
+
+    "The higher you get into the tower the narrower the stairwell. You don’t notice this shift until you suddenly feel your hand brush against the Exorcist’s hand."
+    "The two of you pull your hands away from each other."
+
+    e "Oh, sorry."
+
+    "The chain between the two of you rattles in the silence. You can feel every movement the Exorcist makes from the way the chain shifts around your wrist. You can hear every breath the Exorcist takes as it echoes throughout the stairwell."
+
+    "You suddenly feel the flow of fresh air hit your face and your eyes adjust to the vast chamber that appears in front of you. Light from the pale moon outside shines in through the holes blasted through the brick walls of the tower and you can smell the strong scent of burnt sage that seeps through the floor."
+
+    e "(lets out a huff) What happened to this place?"
+
+    "Suddenly, you feel an overwhelming amount of emotions crush you. Fear, panic, frustration, hunger, depression…"
+    "You keel over from the sudden onslaught of emotions. You open your mouth to scream, but nothing comes out. It’s like you were trapped into your own body. Merely seeing through your eyes like windows to the outside world."
+
+    e "Are you okay?"
+
+    "The concerned voice from the Exorcist reaches you through your panic. He kneels down and appears in your line of sight."
+    "In your stricken state you somehow manage to squeeze out a few words."
+
+    end = ""
+    if relationship > 60:
+        menu:
+            "Say yes and move on":
+                y "Y-y-yes."
+                "You try to stand but your legs feel like jelly."
+                e "Don’t move."
+                "You feel an arm wrap around you as the Exorcist supports you upright."
+                e "You’re clearly not okay. Let’s stay here till you are."
+                "You nod, numbly, barely aware of your surroundings."
+
+                $ end = "goodend"
+            "Say no and cry":
+                y "No."
+                "You feel a warm tear stream down your cheek."
+                "The Exorcist’s finger brushes gently against your face, wiping the tear away."
+                e "Let’s stay here till you feel better."
+
+                $ end = "badend"
+
+    else:
+        menu:
+            "Say yes and move on":
+                y "Y-y-yes."
+                "You try to stand but your legs feel like jelly."
+                "The Exorcist lets out a noticeable sigh."
+                e "Come on, we don’t have all day."
+                "You try standing again but only manage to move a bit."
+                y "I-I can’t move."
+                e "Fine, you can stay there, but only for a bit."
+                $ end = "normal"
+            "Say no and cry":
+                y "No."
+                "You feel a warm tear stream down your cheek."
+                e "Ugh, why are you so dramatic."
+                y "I-I can’t move."
+                e "Fine, you can stay there, but only for a bit."
+                $ end = "fun"
+
+    "You don’t know how much time passes, but at one point your heart finally calms down. You manage to shakily stand up. Cold sweat covers your face and you shiver from the breeze. Your eyes adjust and focus on your surroundings once again."
+
+    e "What happened just now?"
+
+    y "I-I’m not sure…"
+    y "It’s this place."
+
+    "You feel a strange sense of familiarity with this place yet you couldn’t place where you had seen it before. Everywhere you look sends a shiver down your spine as a bad memory seems to be fighting its way into your brain."
+    "You shakily begin walking to the center of the room. The Exorcist follows beside you. Your footsteps leave prints on the floor which was laden with dust."
+
+    y "What do you think happened here?"
+
+    e "I don’t know, but I can feel the remnants of a summoning spell. Something clearly went wrong."
+
+    "The distinct sound of clapping suddenly fills the chamber. You and the Exorcist whip your heads around to see a strange figure in the stairwell doorway."
+
+    show exorcist neutral at left, smallersize
+    show death at righ1, smallersize
+    d "Well, well, well… how is my favorite couple doing? I see, the two of you are getting along quite well."
+
+    e "Who are you, and what do you want?"
+
+    d "(smiling) Why, I am Death! The one and only! I believe me and [player_name] here have met before."
+
+    y "Uhhhh… we have?"
+
+    d "Yes! We indeed have."
+    d "Here, I can help with that."
+
+    "Death snaps its fingers and suddenly you are filled with memories. Who you were, how you got here, why you were here."
+    "You hold your overwhelmed head as Death continues to talk."
+
+    d "You see, [player_name] here has quite a bit of a crush on you starting all the way back from your university days."
+    d "So [player_name] went ahead and tried summoning an evil spirit up here in the tower one night ago."
+    d "I believe the intention was to get your attention, but as you can see it went horribly wrong and I showed up!"
+
+    y "Wait… so I’m dead?"
+
+    d "No, no, no, you weren’t dead, but you certainly needed some help. I appreciated the effort you were putting in for love, though a bit silly, so I decided to set the two of you up!"
+
+    e "Wait, so [player_name] is not an evil spirit?"
+
+    d "That is correct."
+
+    e "Then how do you explain the evil aura?"
+
+    d "I put the evil aura on [player_name], silly."
+
+    y "Was the fortune teller in on this too?"
+
+    d "Tee-hee, it is me. I’m the fortune teller you were talking to. How did you like my notes? I’ve been working on my poetry."
+
+    y "So you set this whole convoluted thought experiment up… so we could be together????"
+
+    d "Well, I’m sorry for helping. You were the one who asked."
+
+    y "No I’m not—It’s just—There was no better way to do it?"
+
+    d "With your flirting skills? Honey please, be so glad I erased your memories."
+
+    d "Anyway, I’ll leave the two of you to it now. I have other couples to attend to. Oh, this is so much fun! I should do it more often."
+
+    "Death disappears from the stairwell leaving the two of you alone once more. You can feel the chain around your wrist loosen then drop with a metallic clank to the floor, paired closely with the Exorcist’s side of the chain falling to the floor as well."
+    
+    if relationship > 60:
+        jump romantic_ending_menu
+    else:
+        jump death_ending_menu
+
+
+label romantic_ending_menu:
+    if end =="goodend":
+        jump romantic_good_end
+    elif end =="badend":
+        jump romantic_bad_end
+
+
+label romantic_good_end:
+
+    "You turn your head sheepishly to look at the Exorcist. Your cheeks are red with embarrassment."
+
+    y "So… Guess I’m not an evil spirit after all."
+
+    "The Exorcist shyly looks away from you, gaze traveling around the room."
+
+    e "You really went through all that trouble… to get my attention?"
+
+    y "Well, you heard him… my flirting skills aren’t really that good."
+
+    "The two of you stand in silence for a bit. The place on your wrist the chain had wrapped around feels cold. There is no longer anything that connects the two of you."
+
+    "Just then, you feel a warm hand lightly take yours."
+
+    e "Come on."
+
+    "You look up to see the Exorcist lightly smiling at you."
+
+    e "Let me take you out on a proper date."
+
+    y "No baths?"
+
+    e "No more baths… for now."
+
+    "You feel a smile on your face as you let the Exorcist guide you down the stairs and out of the tower, into the sleeping city."
+
+    scene black
+    with dissolve
+
+    "Good Ending:"
+    "You and the Exorcist go on your well-deserved date, and another, and another, until eventually, you find yourself with a ring tucked on your finger."
+    "Death has brought you two together, and now only death can do you part."
+
+    return
+
+
+label romantic_bad_end:
+
+    "You turn your head sheepishly to look at the Exorcist. Your cheeks are red with embarrassment."
+
+    y "So… Guess I’m not an evil spirit after all."
+
+    "You feel your heart falter a bit as you stare upon the Exorcist’s stone-cold face."
+
+    e "You tried summoning an evil spirit?"
+
+    y "I-I—but I didn’t!"
+
+    e "’Cause you failed."
+
+    y "But nothing bad happened."
+
+    e "The intention was still there."
+
+    y "Please, I was desperate."
+
+    e "Desperate for what? Attention? Do you think being pathetic absolves you?"
+
+    "You stare pleadingly into the Exorcist’s eyes but don’t see any hint of sympathy."
+
+    e "When you entered this university, you swore an oath to never endanger humanity."
+
+    y "Please! It was a mistake."
+
+    e "You know what happens to people who break the oath."
+
+    y "Please!"
+
+    "You keep pleading with the Exorcist but it is too late. The weapon in his hand is glowing, and a spell is already being murmured."
+    "You sprint to the stairwell, but it is too late. You feel a hot searing pain on your back and then all goes dark."
+
+    scene black
+    with dissolve
+
+    "Bad Ending:"
+    "Despite Death’s best effort to bring you love, you have snatched defeat from the jaws of victory."
+    "Left with no choice, you fall into Death’s cold embrace—for real this time—with the shame of rejection as the last nail on your coffin."
+    "The Exorcist will remember this day with disgust."
+
+    return
+
+
+label death_ending_menu:
+    if end =="normal":
+            jump death_neutral_end
+    elif end =="fun":
+            jump death_peculiar_end
+
+
+label death_neutral_end:
+
+    "You turn your head sheepishly to look at the Exorcist. Your cheeks are red with embarrassment."
+
+    y "So… Guess I’m not an evil spirit after all."
+
+    "You feel your heart falter a bit as you stare upon the Exorcist’s stone-cold face."
+
+    e "It was nice meeting you. Glad I could help."
+
+    "The Exorcist turns to leave, but you grab for his hand."
+
+    y "Wait! Did none of this mean anything to you?"
+
+    "Without turning, the Exorcist replies:"
+
+    e "What it was was a waste of my time."
+
+    "The Exorcist shakes off your hand and you’re left in tears as you blurrily watch his silhouette disappear in the stairwell."
+
+    scene black
+    with dissolve
+
+    "Neutral Ending:"
+    "Despite Death’s best effort to bring you love, you have fallen at the finish line. "
+    "If only you had a little more in you, perhaps you could have crossed the line into the Exorcist’s heart. 
+    "They say the opposite of love is not hate, but indifference, and at this moment, the Exorcist could not care for you less. "
+    "And now, nothing can change that."
+
+    return
 
 
 
+label death_peculiar_end:
+
+    "You stand there, crying until you start shivering from the cold night air. Shakily you wipe away the tears which had already dried on your face."
+    "You sniffle and numbly take a step towards the stairwell. One step then another."
+
+    "As you descend you feel a bit of warmth traveling back into your body. Where do you go from here? Where in this world could you find love again? You had poured so much into the Exorcist that you feel lost now."
+
+    "Slowly, you feel your feet start walking down a familiar path. Back through the hallways, past the classrooms. Out of all the doors you pass, you know that only one door has a warm glowing light behind it."
+
+    "You arrive in front of the professor’s door and lightly knock."
+    
+    show exorcist neutral at center, smallersize
+    p "Who’s there?"
+
+    "You let out a light croak:"
+
+    y "It’s me, professor…"
+
+    "Your throat has dried up from all the crying you did."
+
+    "The door opens and the professor’s concerned face peeks out."
+
+    p "Oh, darling… come in, come in."
+
+    "You numbly walk in and let the door close behind you."
+    
+    scene black
+    with dissolve
+
+    "Peculiar Ending: "
+    "Death had planned to bring you close to a certain heart, but it seems the wind has changed directions."
+    "In other words, we lost the plot, and quite frankly, I’m unsure what to make of your actions. "
+    "As the Exorcist leaves you and the professor behind, they never think of this moment again. 
+    "And, hopefully, I don’t either."
+
+    return
+    
