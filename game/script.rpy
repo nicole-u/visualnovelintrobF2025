@@ -1492,7 +1492,9 @@ label romantic_good_end:
     scene black
     with dissolve
 
-    "Good Ending: You and the Exorcist go on your well-deserved date, and another, and another, until eventually, you find yourself with a ring tucked on your finger. Death has brought you two together, and now only death can do you part."
+    "Good Ending:"
+    "You and the Exorcist go on your well-deserved date, and another, and another, until eventually, you find yourself with a ring tucked on your finger."
+    "Death has brought you two together, and now only death can do you part."
 
     return
 
@@ -1535,7 +1537,10 @@ label romantic_bad_end:
     scene black
     with dissolve
 
-    "Bad Ending: Despite Death’s best effort to bring you love, you have snatched defeat from the jaws of victory. Left with no choice, you fall into Death’s cold embrace—for real this time—with the shame of rejection as the last nail on your coffin. The Exorcist will remember this day with disgust."
+    "Bad Ending:"
+    "Despite Death’s best effort to bring you love, you have snatched defeat from the jaws of victory."
+    "Left with no choice, you fall into Death’s cold embrace—for real this time—with the shame of rejection as the last nail on your coffin."
+    "The Exorcist will remember this day with disgust."
 
     return
 
@@ -1570,7 +1575,11 @@ label death_neutral_end:
     scene black
     with dissolve
 
-    "Neutral Ending: Despite Death’s best effort to bring you love, you have fallen at the finish line. If only you had a little more in you, perhaps you could have crossed the line into the Exorcist’s heart. They say the opposite of love is not hate, but indifference, and at this moment, the Exorcist could not care for you less. And now, nothing can change that."
+    "Neutral Ending:"
+    "Despite Death’s best effort to bring you love, you have fallen at the finish line. "
+    "If only you had a little more in you, perhaps you could have crossed the line into the Exorcist’s heart. 
+    "They say the opposite of love is not hate, but indifference, and at this moment, the Exorcist could not care for you less. "
+    "And now, nothing can change that."
 
     return
 
@@ -1604,7 +1613,11 @@ label death_peculiar_end:
     scene black
     with dissolve
 
-    "Peculiar Ending: Death had planned to bring you close to a certain heart, but it seems the wind has changed directions. In other words, we lost the plot, and quite frankly, I’m unsure what to make of your actions. As the Exorcist leaves you and the professor behind, they never think of this moment again. And, hopefully, I don’t either."
+    "Peculiar Ending: "
+    "Death had planned to bring you close to a certain heart, but it seems the wind has changed directions."
+    "In other words, we lost the plot, and quite frankly, I’m unsure what to make of your actions. "
+    "As the Exorcist leaves you and the professor behind, they never think of this moment again. 
+    "And, hopefully, I don’t either."
 
     return
     
