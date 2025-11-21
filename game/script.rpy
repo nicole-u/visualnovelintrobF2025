@@ -1402,6 +1402,7 @@ label scene5:
     "The distinct sound of clapping suddenly fills the chamber. You and the Exorcist whip your heads around to see a strange figure in the stairwell doorway."
 
     show exorcist neutral at left, smallersize
+    show death at righ1, smallersize
     d "Well, well, well… how is my favorite couple doing? I see, the two of you are getting along quite well."
 
     e "Who are you, and what do you want?"
@@ -1595,7 +1596,8 @@ label death_peculiar_end:
     "Slowly, you feel your feet start walking down a familiar path. Back through the hallways, past the classrooms. Out of all the doors you pass, you know that only one door has a warm glowing light behind it."
 
     "You arrive in front of the professor’s door and lightly knock."
-
+    
+    show exorcist neutral at center, smallersize
     p "Who’s there?"
 
     "You let out a light croak:"
