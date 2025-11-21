@@ -131,6 +131,7 @@ label start:
 
     scene bg city 
     hide ft
+    with fade
 
     sg1 " Did you see that exorcist earlier? So hot! I better marry someone like that. "
     sg2 "'Squeals' Oh my gosh, do you think they noticed us? Does my hair look okay?"
@@ -307,14 +308,16 @@ label start:
     y "But first, what's your name?"
     show unknown upset at center, smallersize
     "{i} The exorcist glares at you.{/i}"
-    e "i literally just told you to stay out of my business."
+    show exorcist shock at center, smallersize
+    e "I literally just told you to stay out of my business."
     y "I didn't think a name would be 'part of your business'"
-    e "It's ____. Now let's get going."
-    e "Actually, wait. What's your name?"
+    e "Well, surely you know of me? I am quite well renowned in the exorcism industry."
+    $ exorcist = renpy.input(prompt = "What do you think is the Exorcist's name?")
+    e "You got it, now tell me yours, so we can get moving."
     y "[player_name]"
     
 
-$ exorcist = "timothy the placeholder"
+# $ exorcist = "timothy the placeholder"
 
 
 
@@ -352,6 +355,7 @@ label s2_clothes:
 
     y "Y'know…those clothes…they look really good on you?"
 
+    show exorcist upset at center, smallersize
     e "Lusting over holy vestments… how vile can you get, evil spirit?"
 
     y "I didn't mean it like that!"
@@ -363,6 +367,7 @@ label s2_clothes:
     y  "I meant you look good in the clothes."
     y  "You probably look hot in anything!"
 
+    show exorcist neutral at center, smallersize
     e "Is this your best attempt at flattery? Blatant sexual harassment?"
 
     y "…I'm sorry…"
@@ -386,6 +391,7 @@ label s2_eyes:
 
     "[exorcist] stops and glances your way, just enough to reveal his left eye piercing into yours. With an exhale, he continues walking."
 
+    show exorcist neutral at center, smallersize
     e "How much do you remember, Spirit?"
 
     y "What do you mean?"
@@ -394,8 +400,11 @@ label s2_eyes:
     e "Some fail to remember even the most basic of things, such as their names."
     e "This is not a coincidence, nor a byproduct of bitterly refusing to die."
     e "It is deliberate."
+    show exorcist upset at center, smallersize
     e "Your kind chooses to forget because they cannot stomach the memory of who, or what, they were."
+    show exorcist shock at center, smallersize
     e "All you keep are the embers of hatred, which you use to burn the world around you."
+    show exorcist mystery at center, smallersize
     e "You see, I am nothing like you."
     e "All I have are memories."
     e "And, of the sludge of the past that swirls in my head, day after day—"
@@ -404,10 +413,11 @@ label s2_eyes:
 
     y "I- I'm sorry. I was just trying to compliment you."
 
+    
     e "I don't need your lies."
 
     y "I wasn't lying. I really do think they're pretty."
-
+    show exorcist upset at center, smallersize
     "[exorcist] pauses for a moment, then shakes his head."
 
     e "…hmph, I dont need your flattery either."
@@ -433,11 +443,12 @@ label s2_merge:
     "One step at a time."
 
     y "Yes, I'll do anything. I'll compliment something else about you!"
-
+    show exorcist neutral at center, smallersize
     e "That's…great, but not what I need. I have something else in mind."
 
     "[exorcist] stops, then turns to you."
 
+    show exorcist flirty at center, smallersize
     e "How about we take a bath together?"
 
     "Were jumping straight to that step!"
@@ -445,13 +456,15 @@ label s2_merge:
 
     y "Wh- what?! Why all of a sudden?"
 
+    show exorcist upset at center, smallersize
     e "You're refusing?"
 
     y "Well, I-I'm not saying that. I'm just confused."
 
+    show exorcist flirty at center, smallersize
     e "Well, after this mess of a day, I think I'd enjoy a nice, thorough cleaning. A cleanse, if you will."
 
-    "That…is an interesting word of choice."
+    "That…is an interesting choice of words.."
 
     "[exorcist] pulls you up the stairs toward a large wooden door engraved with a cross."
 
@@ -495,6 +508,7 @@ label s2_merge:
     y "Every time you talk, it's like you want to murder someone."
     y "And your eyes practically yell it!"
 
+    show exorcist upset at center, smallersize
     e "I- …no. People do not fear me."
 
     y "I do!"
@@ -511,6 +525,7 @@ label s2_merge:
 
     y "Whoa! Do all churches have these?"
 
+    show exorcist neutral at center, smallersize
     e "Yes. They are often used as 'after-work therapy' for exorcists."
 
     "[exorcist] steps into the pool, water reaching below his knees."
@@ -583,6 +598,7 @@ label s2_resist:
 
     "[exorcist] mutters to himself."
 
+    show exorcist upset at center, smallersize
     e "Why did nothing happen? Could this mean…?"
     e "No, of course not. Then, is this evil spirit truly this powerful?"
     e "But then why feign fear? Are they even capable…?"
@@ -597,6 +613,7 @@ label s2_resist:
 
     "Your eyes meet, then dart away."
 
+    show exorcist neutral at center, smallersize
     e "…are you going to get off?"
 
     y "…do you want me to?"
@@ -645,6 +662,7 @@ label s2_accept:
 
     y "Because! I- I wanted to prove I'm not evil!"
 
+    show exorcist upset at center, smallersize
     e "Hmm…"
 
     y "You're grasping at straws! What more do you want?"
@@ -659,6 +677,7 @@ label s2_accept:
 
     y "Totally fine!"
 
+    show exorcist shock at center, smallersize
     e "Alright. You've proven a point. Now stop."
 
     "You rise—but slip. [exorcist] grabs your back, stopping you."
@@ -680,6 +699,7 @@ label s2_final:
 
     priest "Might I bring you some towels?"
 
+    show exorcist neutral at center, smallersize
     e "Please."
 
     "You exit the pool and dry off as best you can."
@@ -710,12 +730,14 @@ label unihall:
     e "Let’s get this over with."
     y "Now wait a minute, we still haven’t made any progress towards finding out how, you know…"
     y "I died?"
+    show exorcist shock at center, smallersize
     e "That isn’t of my concern right now-"
     y "But we had a deal." 
 
     "The exorcist is visibly annoyed."
 
     e "Fine."
+    show exorcist neutral at center, smallersize
     e "Do you have any information at all about what may have caused your death?"
     y "Well, earlier today I woke up in the fortune teller tent you found me near. The fortune teller there told me that I had died, and gave me a tarot card reading when I asked why."
 
@@ -728,6 +750,7 @@ label unihall:
     "I probably shouldn’t tell them about the note."
 
     y "That’s all I’ve got…"
+    show exorcist neutral at center, smallersize
     e "Seriously? Really not much to go off of."
     y "Not my fault."
     e "Evil spirits really are useless…"
@@ -736,7 +759,9 @@ label unihall:
     e "They’re the most knowledgeable on this sort of topic…although a bit unique. I suggest we visit them."
     y "I guess if that’s our best option then let’s go."
     y "Also, no more tricks, right?"
+    show exorcist upset at center, smallersize
     e "…"
+    show exorcist neutral at center, smallersize
     e "Right."
 
     "You and the exorcist are now in the hallway on the way to the archivist."
@@ -744,9 +769,11 @@ label unihall:
     "The walk has been quiet, maybe I can take this opportunity?"
 
     y "So, how is it like at the university?"
+    show exorcist mystery at center, smallersize
     e "And why is this of importance?"
     y "Seems like an interesting place, and I’d like to get to know more about you."
     e "Quit trying to pry…however, I do quite enjoy it here."
+    show exorcist upset at center, smallersize
     e "The academics are thorough, and I’ve found great success because of some of the people here."
     y "What should I say?"
 
@@ -760,30 +787,34 @@ label unihall:
     return
     $ professorchoice = "none"
     label university1:
-        e "I generally don’t concern myself with social interaction. I’d rather not distract myself from my studies."
-        e "Honestly, I’m offended that that is your takeaway of me."
-        y "I didn’t mean to hit a nerve, take it as a compliment rather."
+        e "I generally don't concern myself with social interaction. I'd rather not distract myself from my studies."
+        show exorcist shock at center, smallersize
+        e "Honestly, I'm offended that that is your takeaway of me."
+        y "I didn't mean to hit a nerve, take it as a compliment rather."
         y "I would be happy to know that I strike someone as popular."
+        show exorcist upset at center, smallersize
         e "Again, it is not of my concern [player_name]."
         e "I spend all my time studying and improving my work as an exorcist and to be dumbed down to merely my physical attractiveness is an insult."
-        y "Well, it’s not like I mentioned physical attractiveness in the first place!" 
+        y "Well, it's not like I mentioned physical attractiveness in the first place!" 
         "I definitely meant it though."
 
-        e "Just keep your antics to yourself. We’re almost to the archivist’s room."
+        e "Just keep your antics to yourself. We're almost to the archivist’s room."
     jump unicontinue
 
     label university2:
+        show exorcist neutral at center, smallersize
         e "Yes, it is my main focus here at the university."
         e "I pride myself on my academics and work as an exorcist. It’s hard work, but I manage. I’m… glad that you recognized this."
         y "Knowledge is important, keep doing what you’re doing."
         y "Just know that I appreciate you helping me figure out what caused my death."
-
+        show exorcist tease at center, smallersize
         "The exorcist blushes a little."
 
         jump unicontinue
 
     label unicontinue:
-        e "Hey! Mr. ___, I require your assistance."
+        show exorcist shock at center, smallersize
+        e "Hey! I require your assistance."
 
         "You spot someone hunched over their desk in the corner of the room. They jump up after hearing the exorcist’s shouting."
 
@@ -807,6 +838,7 @@ label unihall:
         a "Right, sorry again…"
         "The archivist takes a pair of glasses out of their back pocket and puts them on. They seem to be tinted with a special green hue."
 
+        show exorcist upset at left, normalsize, lowered, side
         e "Back to what I was saying, I need you to figure out how this…living soul…died."
         a "Um…nobody else showed up when I put on my glasses. Still just you two."
         e "Well, there are only two of us so it’s working."
@@ -819,12 +851,14 @@ label unihall:
         a "Eeek! It’s talking to me!"
         y "Calm down! I didn’t mean to scare you, but it really is true…"
         show arch norm at right, minisize
+        show exorcist shock at left, normalsize, lowered, side
         e "You both are really testing my patience right now. Just show the tarot cards, [player_name]."
         y "Right, here we are."
 
         "You show the archivist the tarot cards and explain how you got them, and what the fortune teller said to you regarding your death. They seem hesitant to help you but eventually settle down."
 
         show arch think at right, minisize
+        show exorcist neutral at left, normalsize, lowered, side
         a "So tower, death and love hm? An…interesting selection.."
         y "Do you have any idea what these could mean?"
         a "Well, I could make a few guesses, but let's ask the cards first."
