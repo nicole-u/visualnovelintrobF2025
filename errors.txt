@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1136: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Try to prove you're not an evil spirit."
-                                             ^
+File "game/script.rpy", line 131: expected statement.
+    print("did something")
+                          ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Thu Nov 20 01:13:15 2025
+Fri Nov 21 14:19:23 2025

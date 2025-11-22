@@ -126,13 +126,13 @@ label start:
 
     "They said that fate would bring the answer to me. Maybe I should stay here."
 
-    "A peak outside wouldn't hurt though. Maybe I could get a clue."
+    menu peekoutside:
+        "A peek outside wouldn't hurt though. Maybe I could get a clue.":
+            scene bg city 
+            hide ft
+            with fade
 
     #insert transition here!
-
-    scene bg city 
-    hide ft
-    with fade
 
     sg1 " Did you see that exorcist earlier? So hot! I better marry someone like that. "
     sg2 "'Squeals' Oh my gosh, do you think they noticed us? Does my hair look okay?"
@@ -1346,7 +1346,7 @@ label scene5:
     "The concerned voice from the Exorcist reaches you through your panic. He kneels down and appears in your line of sight."
     "In your stricken state you somehow manage to squeeze out a few words."
 
-    end = ""
+    $ end = ""
     if relationship > 60:
         menu:
             "Say yes and move on":
@@ -1402,7 +1402,7 @@ label scene5:
     "The distinct sound of clapping suddenly fills the chamber. You and the Exorcist whip your heads around to see a strange figure in the stairwell doorway."
 
     show exorcist neutral at left, smallersize
-    show death at righ1, smallersize
+    show death at right, smallersize
     d "Well, well, well… how is my favorite couple doing? I see, the two of you are getting along quite well."
 
     e "Who are you, and what do you want?"
@@ -1578,7 +1578,7 @@ label death_neutral_end:
 
     "Neutral Ending:"
     "Despite Death’s best effort to bring you love, you have fallen at the finish line. "
-    "If only you had a little more in you, perhaps you could have crossed the line into the Exorcist’s heart. 
+    "If only you had a little more in you, perhaps you could have crossed the line into the Exorcist’s heart. "
     "They say the opposite of love is not hate, but indifference, and at this moment, the Exorcist could not care for you less. "
     "And now, nothing can change that."
 
@@ -1618,7 +1618,7 @@ label death_peculiar_end:
     "Peculiar Ending: "
     "Death had planned to bring you close to a certain heart, but it seems the wind has changed directions."
     "In other words, we lost the plot, and quite frankly, I’m unsure what to make of your actions. "
-    "As the Exorcist leaves you and the professor behind, they never think of this moment again. 
+    "As the Exorcist leaves you and the professor behind, they never think of this moment again." 
     "And, hopefully, I don’t either."
 
     return
